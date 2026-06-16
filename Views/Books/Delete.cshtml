@@ -1,0 +1,39 @@
+@model BaithuchanhORM.Models.Book
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="d-flex align-items-center justify-content-between mb-3">
+    <div>
+        <h1 class="h3 mb-0">Xóa sách</h1>
+        <div class="text-muted">#@Model.Id</div>
+    </div>
+    <a class="btn btn-secondary" asp-action="Index">Quay lại</a>
+</div>
+
+<div class="alert alert-warning">
+    Bạn chắc chắn muốn xóa sách này? Thao tác không thể hoàn tác.
+</div>
+
+<div class="card mb-3">
+    <div class="card-body">
+        <dl class="row mb-0">
+            <dt class="col-sm-3">Tiêu đề</dt>
+            <dd class="col-sm-9">@Model.Title</dd>
+
+            <dt class="col-sm-3">Tác giả</dt>
+            <dd class="col-sm-9">@Model.Author</dd>
+
+            <dt class="col-sm-3">Nhà xuất bản</dt>
+            <dd class="col-sm-9">@(!string.IsNullOrWhiteSpace(Model.Publisher) ? Model.Publisher : "-")</dd>
+        </dl>
+    </div>
+</div>
+
+<form asp-action="Delete" method="post" class="d-flex gap-2">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-outline-secondary">Hủy</a>
+</form>
+

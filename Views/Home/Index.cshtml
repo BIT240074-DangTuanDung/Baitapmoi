@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h1 class="display-3 fw-bold mb-4">📚 Quản lý Sách</h1>
+            <p class="lead mb-5 text-muted">Ứng dụng quản lý sách đơn giản, hiện đại và dễ dùng</p>
+            <div class="d-flex gap-3 justify-content-center">
+                <a asp-controller="Books" asp-action="Index" class="btn btn-primary btn-lg px-5">
+                    🔍 Xem danh sách sách
+                </a>
+                <a asp-controller="Books" asp-action="Create" class="btn btn-outline-primary btn-lg px-5">
+                    ➕ Thêm sách mới
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-5 pt-5">
+        <div class="col-md-4 text-center">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="display-4 mb-3">📖</div>
+                    <h5 class="card-title fw-bold">Thêm Sách</h5>
+                    <p class="card-text text-muted">Thêm sách mới vào thư viện của bạn một cách nhanh chóng</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="display-4 mb-3">🖼️</div>
+                    <h5 class="card-title fw-bold">Upload Ảnh</h5>
+                    <p class="card-text text-muted">Hỗ trợ upload nhiều ảnh cho mỗi cuốn sách</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="display-4 mb-3">📊</div>
+                    <h5 class="card-title fw-bold">Quản lý Dễ</h5>
+                    <p class="card-text text-muted">Xem, sửa, xóa sách một cách tiện lợi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
